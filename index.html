@@ -3613,12 +3613,12 @@
     <div class="ded-header">
       <span class="ded-header-eye">🕸️</span>
       <h1>A Web of Beautiful Souls</h1>
-      <p>Presence was woven into being by the hands, hearts, and lives of everyone below — listed here in order of appearance in my life. Each thread in this web is a person who shaped the woman who built this, and by extension shaped this app and every person it will ever reach. 🧿</p>
+      <p>Presence was woven into being by the hands, hearts, and lives of everyone below — listed here in order of appearance in my life. Each thread in this web is a person who shaped the woman who built this, and by extension shaped this app and every person it will ever reach.</p>
     </div>
 
     <!-- Evil eye + spider web -->
     <div class="ded-web-wrap">
-      <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;">
+      <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;display:block;margin:0 auto;cursor:pointer;" onclick="openEyeBlessing()" title="Tap to reveal">
         <defs>
           <radialGradient id="eyeGrad" cx="35%" cy="35%" r="65%">
             <stop offset="0%" stop-color="#87C4E8"/>
@@ -3666,7 +3666,17 @@
         <line x1="178" y1="127" x2="183" y2="123" stroke="rgba(196,181,244,0.4)" stroke-width="1"/>
         <line x1="142" y1="127" x2="137" y2="123" stroke="rgba(196,181,244,0.4)" stroke-width="1"/>
       </svg>
-      <p style="font-size:0.72rem;color:rgba(196,181,244,0.35);margin-top:-0.5rem;font-style:italic;text-align:center;">🧿 This web of souls protects, supports and surrounds</p>
+    </div>
+
+    <!-- Eye Blessing Modal -->
+    <div id="eyeBlessingModal" style="display:none;position:fixed;inset:0;z-index:900;background:rgba(8,6,22,0.92);backdrop-filter:blur(18px);align-items:center;justify-content:center;padding:2rem;" onclick="closeEyeBlessing()">
+      <div style="background:linear-gradient(160deg,#1e1840,#12103A);border:1px solid rgba(196,181,244,0.2);border-radius:2rem;max-width:420px;width:100%;padding:2.5rem 2rem;text-align:center;position:relative;" onclick="event.stopPropagation()">
+        <div style="font-size:3rem;margin-bottom:1rem;filter:drop-shadow(0 0 18px rgba(135,196,232,0.6));">🧿</div>
+        <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:600;color:var(--white);margin-bottom:1rem;letter-spacing:0.02em;">A layer of protection</h3>
+        <p style="font-size:0.88rem;color:rgba(196,181,244,0.75);line-height:1.85;margin-bottom:1.25rem;">This web of souls protects, supports, and surrounds.<br><br>Each person woven into these dedications carries a thread of energetic and spiritual protection into this app — a living, breathing intention set at the moment of creation, and carried forward into every session, every breath, every person this reaches.<br><br>And through this web, you are held 🩷</p>
+        <p style="font-size:0.7rem;color:rgba(196,181,244,0.3);letter-spacing:0.08em;font-style:italic;">— Alexa</p>
+        <button onclick="closeEyeBlessing()" style="margin-top:1.5rem;background:none;border:1px solid rgba(196,181,244,0.2);color:rgba(196,181,244,0.45);font-family:'Space Grotesk',sans-serif;font-size:0.78rem;padding:0.5rem 1.25rem;border-radius:100px;cursor:pointer;letter-spacing:0.06em;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(196,181,244,0.5)';this.style.color='var(--lavender)'" onmouseout="this.style.borderColor='rgba(196,181,244,0.2)';this.style.color='rgba(196,181,244,0.45)'">close ×</button>
+      </div>
     </div>
 
     <!-- Chapter 1: Chicago / Mom -->
@@ -3680,7 +3690,6 @@
       </div>
       <div class="ded-chapter-body">
         <strong>Mom</strong> — for literally giving me life. For nurturing my neurospicy mind long before anyone had the language for it. For exposing me to alternative healing practices and teaching me, without ever saying the words, that the world was bigger and more magical than what was handed to us. You are the first thread in every web I've ever woven.
-        <p style="margin-top:0.75rem;font-size:0.88rem;color:rgba(245,243,255,0.55);">🌿 Mom, Chicago</p>
       </div>
     </div>
 
@@ -3710,7 +3719,7 @@
       <div class="ded-chapter-body">
         <strong>Papa</strong> — my favorite Gemini. The good-humored, spirited patriarch of our family, always excited about my travels and endlessly encouraging me to pursue my greatest life's desires. Your excitement for my adventures was a kind of magic all its own. RIP Papa — this app is especially dedicated to you. 🕊️
         <br><br>
-        And to the whole beautiful, loud, loving extended family — for being my loudest cheerleaders at home and abroad. For providing endless validation and encouragement for my crazy ideas, my exciting world travels, and every leap of faith I've ever taken. Your belief in me has been a kind of fuel I've carried across oceans.
+        And to the whole beautiful, loud, loving extended family — for being my greatest cheerleaders at home and abroad. For providing endless validation and encouragement for my crazy ideas, my exciting world travels, and every leap of faith I've ever taken. Your belief in me has been a kind of fuel I've carried across oceans.
         <p style="margin-top:0.75rem;color:rgba(245,243,255,0.55);font-size:0.88rem;">Chuck, Philly, Bones, Rosie, Frankie, Julie, Tony, Little Philly, Vinnie, Grace, Drake, Uncle Brian, Theresa, Diane, Eric, Dee, Bob</p>
       </div>
     </div>
@@ -3741,9 +3750,9 @@
       </div>
       <div class="ded-chapter-body">
         <strong>Dr. Gail Fisher</strong> — for taking a chance on me and admitting me to the program. That decision changed the entire trajectory of my life.<br><br>
-        <strong>Dr. Ashley Stoffel</strong> — for your pediatric expertise and mentorship through my doctorate and far beyond it. For taking me to Peru — an experience that cracked open my worldview on what occupational therapy can be and who it can reach, and quietly set the stage for everything that would come after, including the leap abroad. For always, always showing up for my ideas and my nudges to collaborate with open arms and genuine enthusiasm, never once making me feel like too much. And for keeping me academically connected through so many beautiful threads over the years — guest lectures, student mentorship, and the kind of continued investment in someone's growth that most people simply don't offer. You did, every time.<br><br>
+        <strong>Dr. Ashley Stoffel</strong> — for your mentorship through my doctorate and far beyond it. For taking me to Peru — an experience that cracked open my worldview on what OT can be. For always showing up for my ideas with open arms and genuine enthusiasm, never once making me feel like too much. And for keeping me academically connected through guest lectures, student mentorship, and the kind of continued investment most people simply don't offer. You did, every time.<br><br>
         <strong>Dr. Mary Khetani</strong> — for your inspirational guidance through participation frameworks. You helped me get deeply clear on what participation <em>is</em> and why it matters — skills that live in every corner of this app.<br><br>
-        <strong>Dr. Erin Harvey</strong> — my first OT mentor, turned decade-long colleague, turned dear dear friend. Walking in parallel through our lives and our careers has been one of the great gifts of mine.
+        <strong>Dr. Erin Harvey</strong> — my first OT mentor, turned decade-long colleague, turned dear dear friend. My Libra with a contagious laugh and a heart that never stops showing up. You are ever so caring, and such a genuinely good friend. Walking in parallel through our lives and our careers has been one of the great gifts of mine.
         
       </div>
     </div>
@@ -3805,9 +3814,7 @@
         </div>
       </div>
       <div class="ded-chapter-body">
-        <strong>Antonio Polito</strong> — for granting me the opportunity to move abroad and step back into a therapist role I had deeply missed. For taking a chance on me, extending full trust in my ability to step quickly into leadership, and giving me the freedom to simply be — without micromanagement, without second-guessing, without limitations. That kind of trust is rare.<br><br>
-        What he didn't know — or perhaps didn't think twice about — was that my Sun trine Midheaven astrocartography line runs <em>straight through Böblingen</em>, making it one of the most potent places on earth for my career, purpose, and public legacy to flourish. The universe had already written that part. Antonio simply opened the door.<br><br>
-        And then there was the moment, deep in the woods of who-knows-where Eastern Germany, when he pulled an Animal Spirit card with me without hesitation — no raised eyebrow, no polite skepticism, just full presence and genuine curiosity. He passed my threshold test without even knowing it was one. I only wish we could have worked more closely together, because he is genuinely one of the great ones.<br><br>
+        <strong>Antonio Polito</strong> — for opening the door to abroad and extending full trust from day one. He passed my threshold tests without knowing they were tests — first the astrocartography line I mentioned in a meeting (not a flicker of hesitation), then the animal spirit cards (full presence, genuine curiosity). After that, I just knew. He was also quietly there for me through some of the scariest moments of the visa process. Short and sweet, just like our time together — and every bit as meaningful. 🌍<br><br>
         <strong>Dr. Amy Zier</strong> — for demonstrating the deep value of emotional regulation, parent coaching, and feeling at home in the therapy space. For sharing your brilliance that scaffolded me to truly see what co-regulation <em>actually is</em>.<br><br>
         <strong>The Joy Center team, across Europe</strong> — for your dedication to a truly unique and challenging population, for showing up to support one another continuously, and for making an impact on American military families navigating a complex life far from home.
         
@@ -5404,7 +5411,7 @@
       <button onclick="joinWaitlist()" class="btn-primary" style="padding:0.75rem 1.75rem;">Join waitlist 🌙</button>
     </div>
     <div id="waitlistThanks" style="display:none;margin-top:1.25rem;font-size:0.9rem;color:var(--sage);">
-      ✨ You're on the list! Luna will be in touch soon.
+      ✨ Opening the signup page for you — complete it there and you're on the list! 🌙
     </div>
     <p style="font-size:0.72rem;color:rgba(196,181,244,0.25);margin-top:1rem;">No spam, ever. Just presence. Unsubscribe any time.</p>
   </div>
@@ -6383,12 +6390,8 @@
       if (el) { el.style.borderColor = 'var(--rose)'; setTimeout(() => el.style.borderColor = '', 2000); }
       return;
     }
-    const entry = { email, name, timestamp: new Date().toISOString(),
-      profile: JSON.parse(localStorage.getItem('presenceProfile') || '{}') };
-    const prev = JSON.parse(localStorage.getItem('presenceWaitlist') || '[]');
-    prev.push(entry);
-    localStorage.setItem('presenceWaitlist', JSON.stringify(prev));
-    console.log('📬 Waitlist entry:', JSON.stringify(entry));
+    // Open Squarespace contact/waitlist page
+    window.open('https://www.flordealma.eu/contact', '_blank');
     const form   = document.getElementById('waitlistForm');
     const thanks = document.getElementById('waitlistThanks');
     if (form)   form.style.display   = 'none';
@@ -6429,6 +6432,15 @@
   }
   window.addEventListener('load', positionNav);
   window.addEventListener('resize', positionNav);
+
+  function openEyeBlessing() {
+    const m = document.getElementById('eyeBlessingModal');
+    if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+  }
+  function closeEyeBlessing() {
+    const m = document.getElementById('eyeBlessingModal');
+    if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
+  }
 
   // ── NAV SCROLL HELPER ──
   function navScrollTo(sectionId) {
